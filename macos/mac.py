@@ -17,7 +17,7 @@ def main():
 
     if choice == "1":
         erase_flash()
-        write_flash("Xiaozhi.bin")
+        write_flash("xiaozhi_iot.bin")
         print("Flashing of Xiaozhi firmware is complete.")
     elif choice == "2":
         erase_flash()
