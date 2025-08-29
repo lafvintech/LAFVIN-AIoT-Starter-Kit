@@ -49,12 +49,13 @@ LAFVIN AIoT Control Kit支持以下类型的语音控制：
 
    .. code-block:: none
 
-      RGB LED模块    →    ESP32-S3
-      GND           →    GND
-      R (红色)       →    GPIO4
-      G (绿色)       →    GPIO5
-      B (蓝色)       →    GPIO6
+      RGB LED module  →    ESP32-S3
+      GND             →    GND
+      R               →    GPIO4
+      G               →    GPIO5
+      B               →    GPIO6
 
+.. image:: img/connect/rgb_led.jpg
 
 1. **颜色调节**:
    
@@ -77,10 +78,12 @@ WS2812智能灯带
 
 .. code-block:: none
 
-   WS2812灯带    →    ESP32-S3
+   WS2812strip   →    ESP32-S3
    5V            →    5V
    GND           →    GND
    DIN           →    GPIO8
+
+.. image:: img/connect/led_strip.jpg
 
 1. **预设灯光模式**:
    
@@ -105,10 +108,12 @@ WS2812智能灯带
 
    .. code-block:: none
    
-      DHT11传感器    →    ESP32-S3
+      DHT11 Sensor  →    ESP32-S3
       DATA          →    GPIO18
       VCC           →    5V
       GND           →    GND
+
+.. image:: img/connect/dht11.jpg
 
 1. **实时监测功能**:
    
@@ -149,6 +154,7 @@ WS2812智能灯带
       GND           →    GND
       AO            →    GPIO14
 
+.. image:: img/connect/soil_sensor.jpg
 
 1. **土壤状态监测**:
    
@@ -171,6 +177,8 @@ WS2812智能灯带
       红线(VCC)      →    5V
       棕线(GND)      →    GND
       橙线(信号)      →    GPIO9
+
+.. image:: img/connect/servo.jpg
 
 1. **精确角度控制**:
    
@@ -197,6 +205,7 @@ WS2812智能灯带
       GND           →    GND
       IN            →    GPIO10
 
+.. image:: img/connect/fan.jpg
 
 1. **开关控制**:
    
@@ -217,6 +226,8 @@ WS2812智能灯带
       GND           →    GND
       IN1           →    GPIO11
       IN2           →    GPIO12
+
+.. image:: img/connect/relay.jpg
 
 1. **独立控制**:
    

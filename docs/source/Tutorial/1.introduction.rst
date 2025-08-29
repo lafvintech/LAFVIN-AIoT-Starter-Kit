@@ -3,86 +3,86 @@
 1.Introduction
 ==========================
 
-本章节将深入介绍小智AIoT智能控制系统的技术架构、设计理念和创新特性，帮助您全面理解这个基于MCP协议的下一代物联网控制系统。
+This chapter provides an in-depth introduction to the technical architecture, design philosophy, and innovative features of the Xiaozhi AIoT Intelligent Control System, helping you comprehensively understand this next-generation IoT control system based on the MCP protocol.
 
-技术背景
+Technical Background
 --------------------
 
-xiaozhi-esp32 开源项目
+xiaozhi-esp32 Open Source Project
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-小智AIoT系统基于虾哥开源的 `xiaozhi-esp32项目 <https://github.com/78/xiaozhi-esp32>`_ 构建，该项目是一个成熟的ESP32 AI语音助手框架，具有以下技术基础：
+The Xiaozhi AIoT system is built upon the open-source `xiaozhi-esp32 project <https://github.com/78/xiaozhi-esp32>`_ developed by Xiage. This project is a mature ESP32 AI voice assistant framework with the following technical foundations:
 
-* **硬件生态丰富**: 支持70多种不同的开发板配置
-* **多芯片平台**: ESP32-S3、ESP32-C3、ESP32-P4等
-* **完整语音链路**: 离线唤醒 + 流式ASR + LLM + TTS
-* **多语言支持**: 中文、英文、日文等多语言识别
-* **网络连接**: WiFi、4G多种连接方式
+* **Rich Hardware Ecosystem**: Supports over 70 different development board configurations
+* **Multi-chip Platform**: ESP32-S3, ESP32-C3, ESP32-P4, and more
+* **Complete Voice Pipeline**: Offline wake-up + Streaming ASR + LLM + TTS
+* **Multi-language Support**: Chinese, English, Japanese, and other language recognition
+* **Network Connectivity**: WiFi, 4G, and various connection methods
 
-本项目在此基础上，使用了MCP协议，将传统的语音助手升级为AI原生的物联网控制中心。
+Building on this foundation, our project utilizes the MCP protocol to upgrade traditional voice assistants into AI-native IoT control centers.
 
-MCP协议技术原理
---------------------
+MCP Protocol Technical Principles
+----------------------------------
 
-什么是MCP协议
+What is the MCP Protocol
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+MCP (Model Context Protocol) is an emerging standard protocol specifically designed for interaction between AI large language models and external tools/systems. It is based on the JSON-RPC 2.0 specification and provides a standardized mechanism for tool discovery and invocation.
+
+**Comparison with Traditional IoT Protocols**
+
+Traditional IoT control methods have the following issues:
+
+* **Protocol Fragmentation**: Different devices use different control protocols
+* **High Learning Curve**: Users need to learn complex command formats  
+* **Poor Scalability**: Adding new features requires modifying the entire system
+* **Difficult AI Understanding**: Large models cannot directly understand device capabilities
+
+Core advantages of the MCP protocol:
+
+* **Standardization**: Unified JSON-RPC 2.0 message format
+* **Self-describing**: Tools come with parameter and functionality descriptions
+* **AI-friendly**: Large models can directly understand tool definitions
+* **Easy Extension**: Dynamic registration of new tools without modifying clients
+
+MCP Workflow
 ~~~~~~~~~~~~~~~~~~~~
 
-MCP (Model Context Protocol) 是一个新兴的标准协议，专门用于AI大模型与外部工具/系统的交互。它基于JSON-RPC 2.0规范，提供了一套标准化的工具发现和调用机制。
-
-**与传统IoT协议的对比**
-
-传统物联网控制方式存在以下问题：
-
-* **协议碎片化**: 不同设备使用不同的控制协议
-* **学习成本高**: 用户需要学习复杂的指令格式  
-* **扩展性差**: 添加新功能需要修改整个系统
-* **AI理解困难**: 大模型无法直接理解设备功能
-
-MCP协议的核心优势：
-
-* **标准化**: 统一的JSON-RPC 2.0消息格式
-* **自描述**: 工具自带参数和功能说明
-* **AI友好**: 大模型可直接理解工具定义
-* **易扩展**: 动态注册新工具无需修改客户端
-
-MCP工作流程
-~~~~~~~~~~~~~~~~~~~~
-
-**连接建立和工具发现**
+**Connection Establishment and Tool Discovery**
 
 .. figure:: img/连接建立和能力协商流程.png
    :align: center
    :width: 600px
    
-   MCP连接建立和能力协商流程
+   MCP Connection Establishment and Capability Negotiation Process
 
-**设备控制执行流程**
+**Device Control Execution Flow**
 
 .. figure:: img/设备控制流程.png
    :align: center
    :width: 600px
    
-   从语音指令到硬件控制的完整流程
+   Complete flow from voice commands to hardware control
 
-**核心概念详解**
+**Core Concept Explanation**
 
-* **工具(Tools)**: 设备端提供的功能单元，如"设置LED颜色"、"读取温度"
-* **服务器(Server)**: ESP32设备作为MCP服务器，注册和提供工具  
-* **客户端(Client)**: AI后台服务作为MCP客户端，发现和调用工具
-* **会话(Session)**: 客户端与服务器之间的通信会话
+* **Tools**: Functional units provided by the device side, such as "Set LED Color", "Read Temperature"
+* **Server**: ESP32 device acts as MCP server, registering and providing tools  
+* **Client**: AI backend service acts as MCP client, discovering and invoking tools
+* **Session**: Communication session between client and server
 
-在ESP32中的MCP实现
-~~~~~~~~~~~~~~~~~~~~
+MCP Implementation in ESP32
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**工具注册示例**
+**Tool Registration Example**
 
-在xiaozhi-esp32项目中，硬件功能通过MCP工具的形式暴露给AI系统：
+In the xiaozhi-esp32 project, hardware functions are exposed to the AI system in the form of MCP tools:
 
 .. code-block:: json
 
    {
      "name": "self.led.set_color",
-     "description": "设置RGB LED颜色，支持0-255的RGB值",
+     "description": "Set RGB LED color, supports RGB values from 0-255",
      "inputSchema": {
        "type": "object",
        "properties": {
@@ -93,84 +93,84 @@ MCP工作流程
      }
    }
 
-这样的工具定义让AI大模型能够：
+Such tool definitions enable AI large models to:
 
-1. **理解功能**: 知道这是控制LED颜色的工具
-2. **掌握参数**: 了解需要RGB三个0-255的整数参数  
-3. **生成调用**: 根据用户语音自动生成正确的调用请求
+1. **Understand Functionality**: Know this is a tool for controlling LED colors
+2. **Master Parameters**: Understand that three RGB integer parameters from 0-255 are needed  
+3. **Generate Calls**: Automatically generate correct call requests based on user voice input
 
-系统架构设计
---------------------
+System Architecture Design
+---------------------------
 
-整体架构
+Overall Architecture
 ~~~~~~~~~~~~~~~~~~~~
 
 .. image:: img/架构图.png
 
-xiaozhi-esp32 AIoT系统采用分层架构设计，实现了从用户语音到硬件控制的完整链路。
+The xiaozhi-esp32 AIoT system adopts a layered architecture design, implementing a complete pipeline from user voice to hardware control.
 
-**软件架构层次**
+**Software Architecture Layers**
 
 .. code-block:: text
 
    ┌─────────────────────────────────────┐
-   │          应用层 (Application)        │  ← 语音交互、设备管理
+   │          Application Layer          │  ← Voice interaction, device management
    ├─────────────────────────────────────┤
-   │         MCP协议层 (MCP Server)       │  ← 工具注册、消息处理
+   │         MCP Protocol Layer          │  ← Tool registration, message processing
    ├─────────────────────────────────────┤  
-   │       硬件抽象层 (Board Abstraction) │  ← 硬件接口统一
+   │       Hardware Abstraction Layer    │  ← Unified hardware interfaces
    ├─────────────────────────────────────┤
-   │        驱动层 (Device Drivers)       │  ← LED、传感器、舵机等
+   │        Device Driver Layer          │  ← LED, sensors, servos, etc.
    ├─────────────────────────────────────┤
-   │         系统层 (ESP-IDF/FreeRTOS)    │  ← 任务调度、内存管理
+   │    System Layer (ESP-IDF/FreeRTOS)  │  ← Task scheduling, memory management
    └─────────────────────────────────────┘
 
-**关键设计特点**
+**Key Design Features**
 
-1. **MCP协议层**
-   - 标准化的工具注册机制
-   - JSON-RPC 2.0消息处理
-   - 异步执行避免阻塞
-   - 错误处理和状态管理
+1. **MCP Protocol Layer**
+   - Standardized tool registration mechanism
+   - JSON-RPC 2.0 message processing
+   - Asynchronous execution to avoid blocking
+   - Error handling and state management
 
-2. **硬件抽象层**  
-   - 统一的硬件接口设计
-   - 支持70+种开发板
-   - 可配置的GPIO映射
-   - 模块化的驱动架构
+2. **Hardware Abstraction Layer**  
+   - Unified hardware interface design
+   - Support for 70+ development boards
+   - Configurable GPIO mapping
+   - Modular driver architecture
 
-3. **并发处理**
-   - FreeRTOS任务调度
-   - 非阻塞I/O操作
-   - 实时响应保证
-   - 内存高效管理
+3. **Concurrent Processing**
+   - FreeRTOS task scheduling
+   - Non-blocking I/O operations
+   - Real-time response guarantee
+   - Memory-efficient management
 
-系统技术特色
---------------------
+System Technical Features
+-------------------------
 
-**双核并发架构**
+**Dual-Core Concurrent Architecture**
 
-ESP32-S3的双核设计实现了高效的任务分离：
+The dual-core design of ESP32-S3 achieves efficient task separation:
 
-* **核心0**: MCP协议通信、WiFi连接、语音处理
-* **核心1**: 硬件IO、传感器采集、执行器控制
+* **Core 0**: MCP protocol communication, WiFi connection, voice processing
+* **Core 1**: Hardware I/O, sensor data collection, actuator control
 
-**内存管理优化**
+**Memory Management Optimization**
 
-* 核心组件使用静态内存，避免碎片化
-* MCP消息处理采用动态内存池
-* 实时内存监控，确保系统稳定运行
+* Core components use static memory to avoid fragmentation
+* MCP message processing uses dynamic memory pools
+* Real-time memory monitoring ensures stable system operation
 
-二次开发技术要求
---------------------
+Secondary Development Technical Requirements
+--------------------------------------------
 
-本项目需要搭建乐鑫的ESP-IDF环境，需要掌握C++等开发技能。适合有嵌入式或物联网开发基础的技术人员进行定制和扩展。
+This project requires setting up Espressif's ESP-IDF environment and mastery of C++ development skills. It is suitable for technical personnel with embedded or IoT development background to customize and extend.
 
-**核心技术要求**
+**Core Technical Requirements**
 
-* **ESP-IDF 5.4+**: 乐鑫官方开发框架
-* **C++编程**: 现代C++特性、面向对象设计
-* **嵌入式开发**: FreeRTOS、硬件接口编程
-* **网络协议**: JSON-RPC、WebSocket通信
+* **ESP-IDF 5.4+**: Espressif's official development framework
+* **C++ Programming**: Modern C++ features, object-oriented design
+* **Embedded Development**: FreeRTOS, hardware interface programming
+* **Network Protocols**: JSON-RPC, WebSocket communication
 
-如需深度定制，建议参考ESP-IDF官方文档和xiaozhi-esp32开源项目。
+For in-depth customization, it is recommended to refer to the official ESP-IDF documentation and the xiaozhi-esp32 open source project.
