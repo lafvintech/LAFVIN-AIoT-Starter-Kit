@@ -1,7 +1,7 @@
 Components List
 ----------------------
 
-.. image:: Tutorial/img/list.jpg
+.. image:: Tutorial/img/List.jpg
 
 .. list-table:: Hardware Components List
    :widths: 30 15 55
