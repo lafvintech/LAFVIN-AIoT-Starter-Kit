@@ -25,10 +25,10 @@ GPIO Pin Assignment
      - GPIO4 5 6
    * - DHT11传感器
      - 数据信号
-     - GPIO18
+     - GPIO11
    * - SG90舵机
      - PWM控制
-     - GPIO4
+     - GPIO16
    * - WS2812灯带
      - 数据信号
      - GPIO7
