@@ -1,5 +1,5 @@
-ESP32S3 AIChatBot
-====================
+LAFVIN AIoT Starter Kit
+========================================
 
 .. toctree::
    :maxdepth: 2

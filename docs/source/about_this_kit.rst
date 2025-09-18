@@ -5,7 +5,7 @@ About This Kit
 ================
 
 --------------------------------------
-XiaoZhi AIoT Starter Kit
+LAFVIN AIoT Starter Kit
 --------------------------------------
 
 .. figure:: ./Tutorial/img/xiaozhi-aiot-kit.jpg
