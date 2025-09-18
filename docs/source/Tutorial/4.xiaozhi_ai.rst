@@ -114,7 +114,7 @@ Firmware Upload
 3. After the download is complete, press the RST button on the development board. The board will automatically restart and enter network configuration mode
 4. Connect your phone to the hotspot named Xiaozhi-XXXX. The configuration page should open automatically. If not, you can manually enter ``http://192.168.4.1`` in your browser to access the configuration interface
 
-.. image:: img/wificonfig_xiaozhi.png
+.. .. image:: img/wificonfig_xiaozhi.png
 
 5. Select your WiFi network and enter the password to connect
 6. The board will automatically restart, connect to your WiFi, and announce a 6-digit verification code
@@ -127,10 +127,10 @@ Firmware Upload
 .. figure:: img/web6.png
    :align: center
 
-.. image:: img/verify_xiaozhi.png
+.. .. image:: img/verify_xiaozhi.png
 
 After clicking "Confirm" and restarting the device, you'll see this interface. At that point, just say "Hi, ESP," and you can start the conversation.
 
-.. image:: img/main_xiaozhi.png
+.. .. image:: img/main_xiaozhi.png
 
 If you are using a macOS system, please refer to the firmware upload method described in :ref:`macos_upload`.

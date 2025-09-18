@@ -5,159 +5,157 @@ About This Kit
 ================
 
 --------------------------------------
-小智AIoT智能控制系统 XiaoZhi AIoT Kit
+XiaoZhi AIoT Starter Kit
 --------------------------------------
 
 .. figure:: ./Tutorial/img/xiaozhi-aiot-kit.jpg
-   :alt: 小智AIoT智能控制系统
+   :alt: XiaoZhi AIoT Smart Control System
    :align: center
 
-项目简介
-================
+Project Overview
+==================
 
-小智AIoT智能控制系统是一个基于开源项目xiaozhi-esp32开发的新一代物联网控制套件。本套件以ESP32-S3为核心控制器，创新性地引入MCP（Model Context Protocol）协议，让AI大模型能够直接理解和控制硬件设备。
+The XiaoZhi AIoT Starter Kit is a next-generation IoT control kit developed based on the open-source xiaozhi-esp32 project. This kit uses the ESP32-S3 as the core controller and innovatively introduces the MCP (Model Context Protocol), enabling AI large language models to directly understand and control hardware devices.
 
-通过自然语言指令，用户可以轻松控制灯光、监测环境、操控设备，体验真正的AI原生智能家居。套件既适合初学者学习物联网和AI技术，也为开发者提供了强大的原型开发平台。
+Through natural language commands, users can easily control lighting, monitor environments, and operate devices, experiencing truly AI-native smart home technology. The kit is suitable for beginners learning IoT and AI technologies, while also providing developers with a powerful prototyping platform.
 
-核心特色
-===========
+Key Features
+=============
 
-* **AI原生控制**: 基于MCP协议，AI可直接发现和调用硬件功能
-* **语音交互**: 支持自然语言设备控制 - "小智，把灯调成红色"
-* **8大功能模块**: 涵盖灯光控制、环境监测、电机驱动等完整功能
-* **多种控制方式**: 语音控制、手机APP、自定义自动化场景
-* **开源生态**: 基于成熟的xiaozhi-esp32项目，社区支持丰富
+* **AI-Native Control**: Based on MCP protocol, AI can directly discover and invoke hardware functions
+* **Voice Interaction**: Supports natural language device control - "XiaoZhi, turn the light red"
+* **8 Functional Modules**: Complete functionality covering lighting control, environmental monitoring, motor control, etc.
+* **Multiple Control Methods**: Voice control, mobile app, custom automation scenarios
+* **Open Source Ecosystem**: Based on the mature xiaozhi-esp32 project with rich community support
 
-主要功能
-===========
+Main Functions
+===============
 
-**🎨 智能灯光**
-  - RGB LED可调色彩，支持呼吸灯效果
-  - WS2812智能灯带，多种炫酷模式(警车/彩虹追逐)
+**🎨 Smart Lighting**
+  - RGB LED adjustable colors with breathing light effects
+  - WS2812 smart LED strip with various cool modes (police car/rainbow chase)
 
-**🌡️ 环境监测**  
-  - DHT11温湿度实时监测
-  - 雨滴和土壤湿度检测
+**🌡️ Environmental Monitoring**  
+  - DHT11 real-time temperature and humidity monitoring
+  - Rain drop and soil moisture detection
 
-**⚙️ 智能控制**
-  - 精密舵机角度控制  
-  - 智能风扇环境调节
-  - 双路继电器设备控制
+**⚙️ Smart Control**
+  - Precision servo motor angle control  
+  - Smart fan environmental regulation
+  - Dual-channel relay device control
 
 Application Scenarios
 ========================
 
 .. _applications:
 
-* **智能家居控制中心**: 环境监测、灯光控制、设备联动，打造智能化居住环境
-* **教育实验平台**: 学习物联网原理、AI交互技术、传感器应用和自动化控制
-* **创客开发工具**: 快速原型开发，验证AIoT创新想法
-* **农业物联网**: 土壤监测、自动灌溉、环境调节的智能农业解决方案
-* **办公环境管理**: 智能会议室、环境调节、设备状态监控
+* **Smart Home Control Center**: Environmental monitoring, lighting control, device integration to create intelligent living environments
+* **Educational Experiment Platform**: Learn IoT principles, AI interaction technologies, sensor applications, and automation control
+* **Maker Development Tool**: Rapid prototyping to validate AIoT innovative ideas
+* **Agricultural IoT**: Smart agriculture solutions for soil monitoring, automatic irrigation, and environmental regulation
+* **Office Environment Management**: Smart meeting rooms, environmental regulation, and device status monitoring
 
 Hardware Components
 =====================
 
-**主控模块**
+**Main Controller Module**
 
 .. list-table:: 
    :header-rows: 1
    :widths: 40 15 35
    :align: center
    
-   * - 组件名称
-     - 数量
-     - 功能说明
-   * - ESP32-S3开发板
+   * - Component Name
+     - Quantity
+     - Function Description
+   * - ESP32-S3 Development Board
      - 1
-     - 主控制器，支持WiFi/蓝牙，AI语音处理
-   * - 扩展板/面包板
+     - Main controller with WiFi/Bluetooth support, AI voice processing
+   * - AI Chatbot IoT Shield & Breadboard
      - 1
-     - 硬件连接和扩展
+     - Hardware connection and expansion
 
-**传感器模块**
-
-.. list-table:: 
-   :header-rows: 1
-   :widths: 40 15 35
-   :align: center
-   
-   * - 组件名称
-     - 数量
-     - 功能说明
-   * - DHT11温湿度传感器
-     - 1
-     - 环境温度和湿度检测
-   * - 雨滴传感器
-     - 1
-     - 降雨检测，防水自动化
-   * - 土壤湿度传感器
-     - 1
-     - 土壤含水量检测，智能灌溉
-
-**执行器模块**
+**Sensor Modules**
 
 .. list-table:: 
    :header-rows: 1
    :widths: 40 15 35
    :align: center
    
-   * - 组件名称
-     - 数量
-     - 功能说明
-   * - RGB LED模块
+   * - Component Name
+     - Quantity
+     - Function Description
+   * - DHT11 Temperature & Humidity Sensor
      - 1
-     - 三色LED，支持调色和呼吸灯效果
-   * - WS2812智能灯带
+     - Environmental temperature and humidity detection
+   * - Rain Sensor
      - 1
-     - 可编程彩色灯带，多种灯光模式
-   * - SG90舵机
+     - Rainfall detection for waterproof automation
+   * - Soil Moisture Sensor
      - 1
-     - 精密角度控制，0-180度
-   * - 5V直流风扇
-     - 1
-     - 环境调节，温度联动控制
-   * - 双路继电器模块
-     - 1
-     - 外部设备开关控制，5V/10A
+     - Soil water content detection for smart irrigation
 
-**连接配件**
+**Actuator Modules**
 
 .. list-table:: 
    :header-rows: 1
    :widths: 40 15 35
    :align: center
    
-   * - 配件名称
-     - 数量
-     - 用途说明
-   * - 杜邦连接线
-     - 若干
-     - 模块间信号连接
-   * - USB数据线
+   * - Component Name
+     - Quantity
+     - Function Description
+   * - RGB LED Module
      - 1
-     - 程序下载和电源供电
-   * - 电源适配器
+     - Tri-color LED with adjustable colors and breathing light effects
+   * - WS2812 Smart LED Strip
      - 1
-     - 5V外部电源供电
+     - Programmable color LED strip with multiple lighting modes
+   * - SG90 Servo Motor
+     - 1
+     - Precision angle control, 0-180 degrees
+   * - 5V DC Fan
+     - 1
+     - Environmental regulation with temperature linkage control
+   * - 2-Channel Relay Module
+     - 1
+     - External device switch control, 5V/10A
 
-**软件资源**
+**Connection Accessories**
+
+.. list-table:: 
+   :header-rows: 1
+   :widths: 40 15 35
+   :align: center
+   
+   * - Accessory Name
+     - Quantity
+     - Purpose Description
+   * - Dupont Jumper Wires
+     - Multiple
+     - Signal connection between modules
+   * - USB Data Cable
+     - 1
+     - Program download and power supply
+   * - Power Adapter
+     - 1
+     - 5V external power supply
+
+**Software Resources**
 
 .. list-table:: 
    :header-rows: 1
    :widths: 40 60
    :align: center
    
-   * - 软件组件
-     - 说明
-   * - 预编译固件
-     - 包含完整MCP工具的ESP32固件
-   * - 小智AI服务器
-     - 支持语音识别、大模型对话、MCP协议解析
-   * - 手机控制APP
-     - iOS/Android双平台支持
-   * - 开发工具链
-     - Arduino IDE配置文件和示例代码
+   * - Software Component
+     - Description
+   * - Pre-compiled Firmware
+     - ESP32 firmware with complete MCP tools
+   * - XiaoZhi AI Server
+     - Supports voice recognition, large language model dialogue, MCP protocol parsing
+   * - Development Toolchain
+     - ESP-IDF example code
 
 .. note:: 
-   本套件为教育和开发用途设计，所有硬件组件均已包含。建议配合5V/2A以上电源适配器使用以确保稳定运行。
+   This kit is designed for educational and development purposes, with all hardware components included. It is recommended to use the included power adapter to ensure stable operation.

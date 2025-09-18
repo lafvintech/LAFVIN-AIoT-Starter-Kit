@@ -3,52 +3,52 @@ Components List
 
 .. image:: Tutorial/img/list.jpg
 
-.. list-table:: 硬件组件清单
+.. list-table:: Hardware Components List
    :widths: 30 15 55
    :header-rows: 1
 
-   * - 组件名称
-     - 数量
-     - 功能说明
-   * - ESP32-S3开发板
+   * - Component Name
+     - Quantity
+     - Function Description
+   * - ESP32-S3 Development Board
      - 1
-     - 主控制器，集成WiFi/蓝牙，支持AI语音处理
+     - Main controller with integrated WiFi/Bluetooth, supports AI voice processing
    * - AI Chatbot IoT Shield
      - 1
-     - 提供模块连接平台,支持外部供电
-   * - 面包板
+     - Provides module connection platform with external power support
+   * - Breadboard
      - 1
-     - 提供模块连接平台,支持外部供电
-   * - RGB LED模块
+     - Provides module connection platform with external power support
+   * - RGB LED Module
      - 1
-     - 三色LED，支持PWM调色和呼吸灯效果
-   * - DHT11温湿度传感器
+     - Tri-color LED with PWM color adjustment and breathing light effects
+   * - DHT11 Temperature & Humidity Sensor
      - 1
-     - 检测环境温度(0-50°C)和湿度(20-90%RH)
-   * - SG90舵机
+     - Detects environmental temperature (0-50°C) and humidity (20-95%RH)
+   * - SG90 Servo Motor
      - 1
-     - 精密角度控制，0-180度范围
-   * - WS2812智能灯带
+     - Precision angle control, 0-180 degree range
+   * - WS2812 Smart LED Strip
      - 1
-     - 可编程RGB灯带，8颗LED
-   * - 直流风扇
+     - Programmable RGB LED strip with 8 LEDs
+   * - DC Fan
      - 1
-     - 环境调节用风扇，最大电流200mA
-   * - 双路继电器模块
+     - Environmental regulation fan, maximum current 200mA
+   * - 2-Channel Relay Module
      - 1
-     - 5V继电器，可控制AC/DC负载，最大10A
-   * - 雨滴传感器
+     - 5V relay capable of controlling AC/DC loads, maximum 10A
+   * - Rain Sensor
      - 1
-     - 检测水滴，输出数字开关信号
-   * - 土壤湿度传感器
+     - Detects water drops, outputs digital switch signal
+   * - Soil Moisture Sensor
      - 1
-     - 检测土壤含水量，输出模拟电压信号
-   * - 杜邦连接线
-     - 若干
-     - 公对公、公对母、母对母各色连接线
-   * - USB数据线
+     - Detects soil water content, outputs analog voltage signal
+   * - Dupont Jumper Wires
+     - Multiple
+     - Male-to-male, male-to-female, female-to-female connection wires in various colors
+   * - USB Data Cable
      - 1
-     - Type-C接口，用于程序下载和调试
-   * - 9V/2A电源适配器
+     - Type-C interface for program download and debugging
+   * - 9V/2A Power Adapter
      - 1
-     - 外部电源供电，确保系统稳定运行
+     - External power supply to ensure stable system operation
