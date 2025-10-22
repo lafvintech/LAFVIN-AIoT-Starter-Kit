@@ -133,6 +133,8 @@ Environmental Monitoring System
       GND           →    GND
       DO            →    GPIO15
 
+.. image:: img/connect/rain_sensor.jpg
+
 1. **Rainfall Detection**:
    
    * Real-time raindrop sensing
@@ -221,8 +223,8 @@ Smart Control System
       Relay Module  →    ESP32-S3
       VCC           →    5V
       GND           →    GND
-      IN1           →    GPIO11
-      IN2           →    GPIO12
+      IN1           →    GPIO8
+      IN2           →    GPIO9
 
 .. image:: img/connect/relay.jpg
 

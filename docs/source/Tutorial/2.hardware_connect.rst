@@ -1,97 +1,97 @@
 .. _hardware_assembly:
 
-2.Hardware Connect
+2. Hardware Connection
 =========================
 
-本章节将指导您完成小智AIoT智能控制系统的硬件组装，包括ESP32-S3主控板与8个功能模块的连接。
+This chapter will guide you through the hardware assembly of the XiaoZhi AIoT Smart Control System, including connecting the ESP32-S3 main controller with 8 functional modules.
 
 .. warning:: 
-   在开始组装之前，请确保已断开所有电源，避免在通电状态下进行接线操作。
+   Before starting assembly, ensure all power sources are disconnected to avoid wiring operations while powered on.
 
 GPIO Pin Assignment
 ----------------------
 
-以下是各模块与ESP32-S3的引脚对应关系：
+The following shows the pin correspondence between each module and ESP32-S3:
 
-.. list-table:: GPIO引脚分配表
+.. list-table:: GPIO Pin Assignment Table
    :widths: 25 25 25
    :header-rows: 1
 
-   * - 模块名称
-     - 功能
-     - GPIO引脚
+   * - Module Name
+     - Function
+     - GPIO Pin
    * - RGB LED
-     - 红绿蓝通道
+     - Red Green Blue Channels
      - GPIO4 5 6
-   * - DHT11传感器
-     - 数据信号
+   * - DHT11 Sensor
+     - Data Signal
      - GPIO11
-   * - SG90舵机
-     - PWM控制
+   * - SG90 Servo
+     - PWM Control
      - GPIO16
-   * - WS2812灯带
-     - 数据信号
+   * - WS2812 LED Strip
+     - Data Signal
      - GPIO7
-   * - 风扇控制
-     - 开关控制
+   * - Fan Control
+     - Switch Control
      - GPIO10
-   * - 双路继电器模块
-     - 控制信号1 2
+   * - 2-Channel Relay Module
+     - Control Signal 1 2
      - GPIO8 9
-   * - 雨滴传感器
-     - 数字信号
+   * - Rain Sensor
+     - Digital Signal
      - GPIO15
-   * - 土壤传感器
-     - 模拟信号
+   * - Soil Sensor
+     - Digital Signal
      - GPIO17
 
 Assembly Steps
 -----------------
 
-**步骤1: 主控板安装**
+**Step 1: Main Controller Installation**
 
-1. 将ESP32-S3开发板 音频板 屏幕插入AI Chatbot IoT Shield对应的区域中
-2. 确保引脚对齐，避免弯曲损坏
-3. 将AI Chatbot IoT Shield插入面包板中
+1. Insert the ESP32-S3 development board, audio board, and screen into the corresponding areas of the AI Chatbot IoT Shield
+2. Ensure pins are aligned to avoid bending damage
+3. Insert the AI Chatbot IoT Shield into the breadboard
 
-**步骤2: 电源连接**
+**Step 2: Power Connection**
 
-1. 将附送的12V电源适配器到AI Chatbot IoT Shield
+1. Connect the included 12V power adapter to the AI Chatbot IoT Shield
 
-**步骤3: 传感器模块连接**
+**Step 3: Sensor Module Connection**
 
-1. 按照引脚分配表连接DHT11传感器
-2. 连接雨滴传感器和土壤传感器
-3. 检查连接牢固性
+1. Connect the DHT11 sensor according to the pin assignment table
+2. Connect the rain sensor and soil sensor
+3. Check connection stability
 
-**步骤4: 执行器模块连接**
+**Step 4: Actuator Module Connection**
 
-1. 连接RGB LED模块
-2. 安装舵机和WS2812灯带
-3. 连接风扇和继电器模块
+1. Connect the RGB LED module
+2. Install the servo and WS2812 LED strip
+3. Connect the fan and relay modules
 
 .. figure:: img/xiaozhi_aiot_wiring.jpg
    :align: center
    :width: 600px
 
-连接验证
+Connection Verification
 --------------------------
 
-**基础检查清单**
+**Basic Checklist**
 
-□ ESP32-S3开发板安装到位
-□ 所有杜邦线连接牢固
-□ 信号线按照接线表连接
-□ USB线连接电脑,准备上传固件
+□ ESP32-S3 development board installed in place
+□ All Dupont wires securely connected
+□ Signal wires connected according to wiring table
+□ USB cable connected to computer, ready for firmware upload
 
-**功能测试**
+**Function Testing**
 
-1. **上电测试**: 连接USB后，开发板指示灯应点亮
-2. **语音测试**: 说"小智"唤醒设备，听到回应声
-3. **LED测试**: 说"小智，打开LED"测试灯光
-4. **传感器测试**: 说"小智，检查温度"获取数据
+1. **Power-on Test**: After connecting USB, the development board indicator light should illuminate
+2. **Voice Test**: Say "Hi ESP" to wake the device and listen for response
+3. **LED Test**: Say "Hi ESP, turn on LED" to test lighting
+4. **Sensor Test**: Say "Hi ESP, check temperature" to get data
 
 .. tip:: 
-   建议按顺序逐一测试各个功能，确保每个模块都能正常工作。
+   It is recommended to test each function sequentially to ensure each module works properly.
 
-下一步我们将进行软件配置，为硬件系统注入智能。
+Next, we will proceed with software configuration to inject intelligence into the hardware system.
