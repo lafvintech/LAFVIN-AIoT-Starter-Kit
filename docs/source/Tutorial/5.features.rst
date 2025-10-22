@@ -1,6 +1,6 @@
 .. _features_usage:
 
-5. Features Usage Guide
+5.Features Usage Guide
 ========================
 
 This chapter provides a detailed introduction to the various functions and usage methods of the XiaoZhi AIoT Starter Kit, helping you fully utilize the potential of this intelligent control system.
