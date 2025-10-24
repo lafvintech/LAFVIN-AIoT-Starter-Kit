@@ -70,10 +70,6 @@ Assembly Steps
 2. Install the servo and WS2812 LED strip
 3. Connect the fan and relay modules
 
-.. figure:: img/xiaozhi_aiot_wiring.jpg
-   :align: center
-   :width: 600px
-
 Connection Verification
 --------------------------
 
