@@ -69,7 +69,6 @@ Smart Lighting System
    * Voice command: "Hi ESP, enable breathing light mode"
 
 .. .. video:: img/rgb_led_demo.mp4
-.. video:: ../Appendix/img/driver_ins.mp4
     :width: 100%
 
 **WS2812 Smart LED Strip**
@@ -119,7 +118,6 @@ Environmental Monitoring System
    * Voice query: "Hi ESP, what's the current temperature and humidity?"
 
 .. .. video:: img/dht11_demo.mp4
-.. video:: ../Appendix/img/driver_ins.mp4
     :width: 100%
 
 
@@ -141,7 +139,6 @@ Environmental Monitoring System
    * Voice query: "Hi ESP, is it raining outside?"
 
 .. .. video:: img/rain_sensor_demo.mp4
-.. video:: ../Appendix/img/driver_ins.mp4
     :width: 100%
 
 **Soil Moisture Sensor**
@@ -162,7 +159,6 @@ Environmental Monitoring System
    * Voice query: "Hi ESP, how is the soil moisture of the plants?"
 
 .. .. video:: img/soil_sensor_demo.mp4
-.. video:: ../Appendix/img/driver_ins.mp4
     :width: 100%
    
 Smart Control System
@@ -191,7 +187,6 @@ Smart Control System
    * Voice command: "Hi ESP, start servo scanning"
 
 .. .. video:: img/servo_demo.mp4
-.. video:: ../Appendix/img/driver_ins.mp4
     :width: 100%
 
 **Smart Fan Control**
