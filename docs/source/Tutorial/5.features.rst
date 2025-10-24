@@ -95,7 +95,7 @@ Smart Lighting System
    * Individual LED control: Precise control of each LED
    * Voice commands: "Hi ESP, enable rainbow chase on LED strip", "Hi ESP, enable police car mode on LED strip"
 
-.. video:: ../img/police_mode.mp4
+.. video:: /img/phenomenon/police_mode.mp4
     :width: 100%
 
 Environmental Monitoring System
@@ -210,7 +210,7 @@ Smart Control System
    * Voice control: "Hi ESP, turn on the fan" / "Hi ESP, turn off the fan"
    * Status query: "Hi ESP, is the fan running?"
 
-.. video:: img/fan.mp4
+.. video:: img/phenomenon/fan.mp4
     :width: 100%
 
 **2-Channel Relay Control**
@@ -237,7 +237,7 @@ Smart Control System
    * Timer on/off functionality
    * Safety isolation protection
 
-.. video:: img/relays.mp4
+.. video:: img/phenomenon/relays.mp4
     :width: 100%
 
 Application Scenarios
