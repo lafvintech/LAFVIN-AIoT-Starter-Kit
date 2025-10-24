@@ -95,7 +95,7 @@ Smart Lighting System
    * Individual LED control: Precise control of each LED
    * Voice commands: "Hi ESP, enable rainbow chase on LED strip", "Hi ESP, enable police car mode on LED strip"
 
-.. video:: /img/phenomenon/police_mode.mp4
+.. video:: img/phenomenon/police_mode.mp4
     :width: 100%
 
 Environmental Monitoring System
