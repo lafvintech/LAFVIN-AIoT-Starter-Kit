@@ -54,6 +54,9 @@ Assembly Steps
 2. Ensure pins are aligned to avoid bending damage
 3. Insert the AI Chatbot IoT Shield into the breadboard
 
+.. video:: img/connect/la066_assemble.mp4
+  :width: 100%
+
 **Step 2: Power Connection**
 
 1. Connect the included 12V power adapter to the AI Chatbot IoT Shield
@@ -64,11 +67,28 @@ Assembly Steps
 2. Connect the rain sensor and soil sensor
 3. Check connection stability
 
+.. image:: img/connect/dht11.jpg
+
+.. image:: img/connect/rain_sensor.jpg
+
+.. image:: img/connect/soil_sensor.jpg
+
 **Step 4: Actuator Module Connection**
 
 1. Connect the RGB LED module
 2. Install the servo and WS2812 LED strip
 3. Connect the fan and relay modules
+
+.. image:: img/connect/rgb_led.jpg
+
+.. image:: img/connect/fan.jpg
+
+.. image:: img/connect/led_strip.jpg
+
+.. image:: img/connect/relay.jpg
+
+.. image:: img/connect/servo.jpg
+
 
 Connection Verification
 --------------------------
