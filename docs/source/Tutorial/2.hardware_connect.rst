@@ -1,6 +1,6 @@
 .. _hardware_assembly:
 
-2. Hardware Connection
+2.Hardware Connection
 =========================
 
 This chapter will guide you through the hardware assembly of the XiaoZhi AIoT Smart Control System, including connecting the ESP32-S3 main controller with 8 functional modules.
