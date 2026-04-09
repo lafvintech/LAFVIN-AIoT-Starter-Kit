@@ -8,13 +8,19 @@ LAFVIN AIoT Starter Kit
    :maxdepth: 1
    :caption: About This Kit
 
-   about-this-kit
+   about_this_kit
 
 .. toctree::
    :maxdepth: 1
    :caption: Components List
 
    components_list
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Quick Start
+
+   Tutorial/0.quick_start
 
 .. toctree::
    :maxdepth: 1
