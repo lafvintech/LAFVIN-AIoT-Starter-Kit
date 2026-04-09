@@ -53,7 +53,11 @@ Step 3: Configure Wi-Fi and the Backend
    :align: center
    :alt: Add Device Interface
 
-1. Of course, you can also click the Configure Role button to configure the agent parameters:
+.. figure:: img/web6.png
+   :align: center
+
+
+7. Of course, you can also click the Configure Role button to configure the agent parameters:
 
    * Assistant Name: Name your AI assistant
    * Voice Role: Select your preferred voice style
@@ -75,6 +79,9 @@ Below is a sample prompt that you can modify according to your needs:
 First Use
 -------------
 After the device is connected to the network, you can press the wake button or say ``Hi, ESP`` to start a voice conversation.
+
+.. figure:: img/finish.jpg
+   :align: center
 
 Next Steps
 -------------
