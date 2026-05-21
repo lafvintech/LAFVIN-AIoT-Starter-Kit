@@ -1,0 +1,31 @@
+{
+  "description": "ESP32-S3 小智固件合并配置",
+  "flash_size_mb": 16,
+  "layout": [
+    {
+      "address": "0x0",
+      "file": "bootloader/bootloader.bin",
+      "description": "引导加载程序"
+    },
+    {
+      "address": "0x8000",
+      "file": "partition_table/partition-table.bin", 
+      "description": "分区表"
+    },
+    {
+      "address": "0xd000",
+      "file": "ota_data_initial.bin",
+      "description": "OTA数据初始化"
+    },
+    {
+      "address": "0x10000",
+      "file": "srmodels/srmodels.bin",
+      "description": "语音识别模型"
+    },
+    {
+      "address": "0x100000",
+      "file": "xiaozhi.bin",
+      "description": "主应用程序"
+    }
+  ]
+}
