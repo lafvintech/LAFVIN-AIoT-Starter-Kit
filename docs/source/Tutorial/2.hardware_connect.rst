@@ -6,13 +6,13 @@
 This chapter walks through the hardware assembly for the LAFVIN AIoT Starter Kit, including the ESP32-S3 main controller and the included modules.
 
 .. warning::
-   Before starting assembly, disconnect all power sources. Do not wire the board while it is powered on.
+   Before starting assembly:
+
+   * disconnect all power sources and do not wire the board while it is powered on
+   * do not connect high-voltage external loads to the relay module until the board, firmware, and voice control path have already been tested successfully
 
 .. note::
    Use the included external power adapter only after the controller board and modules are connected. For first-time flashing, a USB Type-C data cable connected to your computer is usually enough.
-
-.. warning::
-   Do not connect high-voltage external loads to the relay module until the board, firmware, and voice control path have already been tested successfully.
 
 GPIO Pin Assignment
 ----------------------
@@ -51,6 +51,8 @@ The following table shows the main control pins used by each module:
      - Digital signal
      - GPIO17
 
+------------------------------------------------------------------------------------
+
 Assembly Steps
 -----------------
 
@@ -63,11 +65,7 @@ Assembly Steps
 .. video:: img/connect/la066_assemble.mp4
    :width: 100%
 
-**Step 2: Connect power**
-
-1. After the controller and modules are installed, connect the included external power adapter to the AI Chatbot IoT Shield.
-
-**Step 3: Connect the sensor modules**
+**Step 2: Connect the sensor modules**
 
 1. Connect the DHT11 sensor according to the pin assignment table.
 2. Connect the rain sensor and soil sensor.
@@ -79,7 +77,7 @@ Assembly Steps
 
 .. image:: img/connect/soil_sensor.jpg
 
-**Step 4: Connect the actuator modules**
+**Step 3: Connect the actuator modules**
 
 1. Connect the RGB LED module.
 2. Install the servo and WS2812 LED strip.
@@ -95,27 +93,31 @@ Assembly Steps
 
 .. image:: img/connect/servo.jpg
 
-Connection Verification
+**Step 4: Connect power for the first time**
+
+1. After the controller board and modules are installed, connect the included external power adapter.
+2. Connect the USB Type-C data cable to your computer if you are preparing to flash firmware next.
+
+Pre-Flash Check
 --------------------------
 
-**Basic Checklist**
+Use this checklist before continuing to software setup and firmware flashing:
 
 * ESP32-S3 development board installed correctly
+* Audio board and screen seated correctly
 * All Dupont wires connected securely
 * Signal wires connected according to the wiring table
-* USB data cable connected to the computer and ready for firmware upload
+* USB Type-C data cable connected to the computer
+* No external high-voltage load connected to the relay module
 
-**Function Testing**
+Basic Power-On Check
+--------------------
 
-1. **Power-on Test**: After connecting USB power, the development board indicator light should turn on.
-2. **Voice Test**: Say ``Hi, ESP`` to wake the device and listen for a response.
-3. **LED Test**: Say ``Hi, ESP, turn on LED`` to test the lighting output.
-4. **Sensor Test**: Say ``Hi, ESP, check temperature`` to confirm that the sensor data path is working.
+1. Connect USB power or the included external power adapter.
+2. Confirm that the development board powers on.
+3. If the board does not power on, disconnect it immediately and recheck the wiring and module alignment.
 
 .. tip::
-   Test one module at a time. It is much easier to isolate a wiring issue before every module is connected.
+   At this stage, verify only wiring and basic power. Perform voice, LED, and sensor function tests after firmware flashing, Wi-Fi setup, and backend binding are complete.
 
 Next, continue with software setup and firmware flashing.
-
-
-.. 有个问题,这个硬件链接章节前还没帮烧录,不确定是否要调整一下顺序,就是讲这些测试的转移到烧录之后进行，或者在这里先讲一下基本的连接和上电测试，烧录之后再进行功能测试。

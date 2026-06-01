@@ -53,6 +53,8 @@ Choose Your Setup Path
      - Developers customizing the firmware
      - ESP-IDF environment and C++ experience
 
+------------------------------------------------------------------------------------
+
 Quick Setup
 -----------
 
@@ -125,6 +127,21 @@ After the board restarts, press the wake button or say ``Hi, ESP`` to start a vo
 .. figure:: img/finish.jpg
    :align: center
    :alt: LAFVIN AIoT Starter Kit ready screen
+
+Post-Setup Functional Check
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+After firmware flashing, Wi-Fi setup, and backend binding are complete, use the checks below to confirm that the full system is working:
+
+You can refer to :ref:`hardware_assembly` for the wiring diagrams and pin assignment table for each sensor and actuator. After the hardware connections are complete, use the voice checks below to confirm that the system is working correctly.
+
+1. **Voice Test**: Say ``Hi, ESP`` and confirm that the assistant wakes up and responds.
+2. **LED Test**: Say ``Hi, ESP, turn on LED`` to confirm that the RGB LED responds.
+3. **Sensor Test**: Say ``Hi, ESP, check temperature`` to confirm that the sensor data path is working.
+
+.. tip::
+   If a hardware module does not respond, return to :doc:`/Tutorial/2.hardware_connect` and recheck the wiring before reflashing the firmware.
+
+------------------------------------------------------------------------------------
 
 Optional: Customize the Agent Role
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

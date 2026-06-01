@@ -88,29 +88,38 @@ Configure the Agent Role
    :align: center
    :alt: Save the assistant role
 
-.. _xiaozhi_conf:
+------------------------------------------------------------------------------------
 
-Bind the Device
-------------------------------------------
+Firmware Upload
+===============
+Online Flashing
+-------------------
+You can also use an online flashing tool. The advantage of this method is that you simply open the webpage, select your device and firmware version, and it requires no configuration. Once flashing is complete, you can start using it right away.
 
-1. Keep the board powered on after Wi-Fi configuration.
-2. In the agent page, click ``Add Device``.
-3. Enter the 6-digit verification code announced by the board.
-4. Confirm the binding and wait for the board to restart.
-
-.. figure:: img/web6.png
-   :align: center
-   :alt: Bind the board with a verification code
-
-After the restart completes, say ``Hi, ESP`` to start the first conversation.
-
-.. _firmware_upload:
-
-Local Firmware Upload (Alternative)
-===================================
+.. note::
+   Online flashing is supported only in Chrome or Edge browsers.
 
 .. warning::
-   Use this method only if the :doc:`online flasher </Appendix/online_flasher>` is unavailable or cannot detect your board.
+   Use a USB Type-C cable that supports data transfer. A charging-only cable may power the board but will not work for flashing.
+
+For detailed instructions on using the online flasher, see :ref:`Online Flasher <online_flasher>`.
+
+Follow these steps:
+
+   A. Open the `LAFVIN Web Flasher <https://lafvintech.github.io/Lafvin_Web_Flasher/>`_
+   B. Select the following options:
+
+      - Device: ``AIoT Starter Kit``
+      - Firmware: ``Xiaozhi-Aiot``
+      - Version: ``Xiaozhi-Aiot``
+
+   C. Connect the development board to your computer using a USB Type-C data cable. Click ``Connect``, then select your device in the browser pop-up window and click ``Connect``.
+   D. Click ``Flash`` to start flashing. Wait for the process to complete, then restart the device.
+
+.. raw:: html
+
+   <details>
+   <summary><strong>Local Flashing (Alternative)</strong></summary>
 
 1. Open the local flashing tool package from the downloaded project files.
 2. Double-click ``Flash Download Tools`` and select the same options shown below.
@@ -143,6 +152,32 @@ Local Firmware Upload (Alternative)
 6. Continue with :ref:`xiaozhi_conf` to connect the board to Wi-Fi and bind it in the backend.
 
 If you are using macOS and need a local flashing path, refer to :ref:`macos_upload`.
+
+.. raw:: html
+
+   </details>
+
+------------------------------------------------------------------------------------
+
+.. _xiaozhi_conf:
+
+Bind the Device
+------------------------------------------
+
+1. Keep the board powered on after Wi-Fi configuration.
+2. In the agent page, click ``Add Device``.
+3. Enter the 6-digit verification code announced by the board.
+4. Confirm the binding and wait for the board to restart.
+
+.. figure:: img/web6.png
+   :align: center
+   :alt: Bind the board with a verification code
+
+After the restart completes, say ``Hi, ESP`` to start the first conversation.
+
+.. _firmware_upload:
+
+------------------------------------------------------------------------------------
 
 .. _alternative_backend:
 
