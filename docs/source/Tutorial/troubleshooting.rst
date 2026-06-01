@@ -71,6 +71,22 @@ Flashing and Connection
 Backend Binding
 ------------------------------------------
 
+**I Do Not Want to Use Phone Registration or the Official Backend**
+
+* **Symptom**: You want to avoid phone registration, use a different LLM, or reduce dependency on the official backend.
+* **Possible Causes**:
+  
+  1. You prefer a self-hosted deployment
+  2. You have privacy or data-routing concerns
+  3. You want to integrate your own model or infrastructure
+  
+* **Solutions**:
+  
+  1. Review :ref:`alternative_backend` for the self-hosted path
+  2. Use one of the compatible backend projects listed in the `xiaozhi-esp32 Related Open Source Projects <https://github.com/78/xiaozhi-esp32#related-open-source-projects>`_
+  3. Be prepared to modify and rebuild the firmware so it points to the new server
+  4. Use the official ``xiaozhi.me`` workflow if you want the path covered by this LAFVIN guide
+
 **Cannot Add the Device in Xiaozhi**
 
 * **Symptom**: The board announces a verification code, but binding does not complete in the Xiaozhi backend.

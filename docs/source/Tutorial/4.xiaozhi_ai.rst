@@ -143,3 +143,24 @@ Local Firmware Upload (Alternative)
 6. Continue with :ref:`xiaozhi_conf` to connect the board to Wi-Fi and bind it in the backend.
 
 If you are using macOS and need a local flashing path, refer to :ref:`macos_upload`.
+
+.. _alternative_backend:
+
+Alternative Backend and Privacy Options
+=========================================
+
+If you do not want to register with a phone number, want to use a different LLM, or prefer to keep more control over your data flow, you can explore the self-hosted server projects listed in the `xiaozhi-esp32 Related Open Source Projects <https://github.com/78/xiaozhi-esp32#related-open-source-projects>`_ section.
+
+This path usually requires you to:
+
+* deploy your own compatible backend service
+* modify the firmware source code so the device points to your new server
+* rebuild and flash the firmware again
+
+.. warning::
+   The LAFVIN kit documentation and the workflows in this guide are tested only with the official Xiaozhi server at ``xiaozhi.me``. We do not verify compatibility, deployment steps, privacy behavior, or long-term stability for third-party or self-hosted servers in this tutorial.
+
+.. note::
+   Self-hosting is an advanced workflow intended for users who are comfortable with backend deployment, ESP-IDF builds, firmware changes, and credential management.
+
+
