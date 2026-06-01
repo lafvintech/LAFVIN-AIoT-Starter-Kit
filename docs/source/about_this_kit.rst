@@ -149,7 +149,7 @@ Hardware Components
 .. list-table::
    :header-rows: 1
    :widths: 40 60
-   :align: center
+   :align: left
 
    * - Software Component
      - Description

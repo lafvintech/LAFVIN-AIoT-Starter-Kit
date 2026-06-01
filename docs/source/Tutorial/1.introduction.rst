@@ -11,7 +11,12 @@ Technical Background
 xiaozhi-esp32 Open Source Project
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The Xiaozhi AIoT system is built upon the open-source `xiaozhi-esp32 project <https://github.com/78/xiaozhi-esp32>`_ developed by Xiage. This project is a mature ESP32 AI voice assistant framework with the following technical foundations:
+The Xiaozhi AIoT system used in this project is built on the open-source `xiaozhi-esp32 project <https://github.com/78/xiaozhi-esp32>`_, a mature ESP32 AI voice assistant framework that supports secondary development.
+
+If you only want to use the device, you can follow the flashing tutorial directly without building the source code yourself. If you want to customize features or continue development, refer to :ref:`open_source`.
+
+The project provides the following technical foundations:
+
 
 * **Rich Hardware Ecosystem**: Supports over 70 different development board configurations
 * **Multi-chip Platform**: ESP32-S3, ESP32-C3, ESP32-P4, and more
@@ -20,6 +25,7 @@ The Xiaozhi AIoT system is built upon the open-source `xiaozhi-esp32 project <ht
 * **Network Connectivity**: Wi-Fi, 4G, and various connection methods
 
 Building on this foundation, our project utilizes the MCP protocol to upgrade traditional voice assistants into AI-native IoT control centers.
+
 
 MCP Protocol Technical Principles
 ----------------------------------
