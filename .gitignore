@@ -1,1 +1,3 @@
 *.code-workspace
+*build/
+*documentation_optimization_report.md

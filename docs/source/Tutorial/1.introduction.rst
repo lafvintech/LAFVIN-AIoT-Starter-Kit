@@ -17,7 +17,7 @@ The Xiaozhi AIoT system is built upon the open-source `xiaozhi-esp32 project <ht
 * **Multi-chip Platform**: ESP32-S3, ESP32-C3, ESP32-P4, and more
 * **Complete Voice Pipeline**: Offline wake-up + Streaming ASR + LLM + TTS
 * **Multi-language Support**: Chinese, English, Japanese, and other language recognition
-* **Network Connectivity**: WiFi, 4G, and various connection methods
+* **Network Connectivity**: Wi-Fi, 4G, and various connection methods
 
 Building on this foundation, our project utilizes the MCP protocol to upgrade traditional voice assistants into AI-native IoT control centers.
 
@@ -152,7 +152,7 @@ System Technical Features
 
 The dual-core design of ESP32-S3 achieves efficient task separation:
 
-* **Core 0**: MCP protocol communication, WiFi connection, voice processing
+* **Core 0**: MCP protocol communication, Wi-Fi connection, voice processing
 * **Core 1**: Hardware I/O, sensor data collection, actuator control
 
 **Memory Management Optimization**

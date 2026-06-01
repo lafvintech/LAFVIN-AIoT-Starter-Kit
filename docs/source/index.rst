@@ -2,9 +2,6 @@ LAFVIN AIoT Starter Kit
 ========================================
 
 .. toctree::
-   :maxdepth: 2
-
-.. toctree::
    :maxdepth: 1
    :caption: About This Kit
 
@@ -31,5 +28,5 @@ LAFVIN AIoT Starter Kit
 .. toctree::
    :maxdepth: 1
    :caption: Appendix
-   
+
    Appendix/appendix

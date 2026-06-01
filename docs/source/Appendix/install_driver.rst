@@ -41,7 +41,7 @@ You can install it following the video below
 
 .. _macos_upload:
 
-MacOS Firmware Upload
+macOS Firmware Upload
 ---------------------------
 
 1. First, find the macos folder in the Github repository, you can download the whole project to your local computer.

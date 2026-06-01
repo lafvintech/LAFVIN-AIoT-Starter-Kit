@@ -1,87 +1,90 @@
 .. _about-this-kit:
 
-===============
+==============
 About This Kit
-================
+==============
 
---------------------------------------
 LAFVIN AIoT Starter Kit
---------------------------------------
+=======================
 
 .. figure:: ./Tutorial/img/xiaozhi-aiot-kit.jpg
-   :alt: XiaoZhi AIoT Smart Control System
+   :alt: LAFVIN AIoT Starter Kit
    :align: center
 
 Project Overview
-==================
+================
+.. 下面的开源内容可以增加我们已经开源的src分支网址
 
-The XiaoZhi AIoT Starter Kit is a next-generation IoT control kit developed based on the open-source xiaozhi-esp32 project. This kit uses the ESP32-S3 as the core controller and innovatively introduces the MCP (Model Context Protocol), enabling AI large language models to directly understand and control hardware devices.
+The LAFVIN AIoT Starter Kit is built on the open-source `xiaozhi-esp32 project <https://github.com/78/xiaozhi-esp32>`_. It uses the ESP32-S3 as the main controller and applies the MCP (Model Context Protocol) to voice-driven hardware control.
 
-Through natural language commands, users can easily control lighting, monitor environments, and operate devices, experiencing truly AI-native smart home technology. The kit is suitable for beginners learning IoT and AI technologies, while also providing developers with a powerful prototyping platform.
+With natural language commands, users can control lights, read sensors, and trigger connected devices. The kit is suitable for beginners learning IoT and AI workflows, and it also provides a practical starting point for prototyping and secondary development.
 
 Key Features
-=============
+============
 
-* **AI-Native Control**: Based on MCP protocol, AI can directly discover and invoke hardware functions
-* **Voice Interaction**: Supports natural language device control - "XiaoZhi, turn the light red"
-* **8 Functional Modules**: Complete functionality covering lighting control, environmental monitoring, motor control, etc.
-* **Multiple Control Methods**: Voice control, mobile app, custom automation scenarios
-* **Open Source Ecosystem**: Based on the mature xiaozhi-esp32 project with rich community support
+* **AI-Native Control**: The backend can discover and invoke device tools through MCP.
+* **Voice Interaction**: Use natural language commands such as ``Hi, ESP, turn the light red``.
+* **Multi-Module Starter Kit**: Includes lighting, sensing, motor, fan, and relay modules.
+* **Beginner-Friendly Setup**: Supports browser-based flashing and guided backend binding.
+* **Open Source Foundation**: Built on the mature xiaozhi-esp32 ecosystem.
 
 Main Functions
-===============
+==============
 
-**🎨 Smart Lighting**
-  - RGB LED adjustable colors with breathing light effects
-  - WS2812 smart LED strip with various cool modes (police car/rainbow chase)
+**Smart Lighting**
 
-**🌡️ Environmental Monitoring**  
-  - DHT11 real-time temperature and humidity monitoring
-  - Rain drop and soil moisture detection
+* RGB LED color control and breathing effects
+* WS2812 LED strip animation modes such as police mode and rainbow chase
 
-**⚙️ Smart Control**
-  - Precision servo motor angle control  
-  - Smart fan environmental regulation
-  - Dual-channel relay device control
+**Environmental Monitoring**
+
+* DHT11 temperature and humidity sensing
+* Rain and soil moisture detection
+
+**Smart Control**
+
+* Servo angle control
+* Fan on and off control
+* Two-channel relay control
 
 Application Scenarios
-========================
+=====================
 
 .. _applications:
 
-* **Smart Home Control Center**: Environmental monitoring, lighting control, device integration to create intelligent living environments
-* **Educational Experiment Platform**: Learn IoT principles, AI interaction technologies, sensor applications, and automation control
-* **Maker Development Tool**: Rapid prototyping to validate AIoT innovative ideas
-* **Agricultural IoT**: Smart agriculture solutions for soil monitoring, automatic irrigation, and environmental regulation
-* **Office Environment Management**: Smart meeting rooms, environmental regulation, and device status monitoring
+* **Smart Home Control Center**: Environmental monitoring, lighting control, and device integration
+* **Educational Experiment Platform**: IoT principles, AI interaction, and sensor application demos
+* **Maker Development Tool**: Rapid prototyping for AIoT projects
+* **Agricultural IoT**: Soil monitoring and automation experiments
+* **Office Environment Management**: Environmental monitoring and device status demos
 
 Hardware Components
-=====================
+===================
 
 **Main Controller Module**
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 40 15 35
    :align: center
-   
+
    * - Component Name
      - Quantity
      - Function Description
    * - ESP32-S3 Development Board
      - 1
-     - Main controller with WiFi/Bluetooth support, AI voice processing
+     - Main controller with Wi-Fi and Bluetooth support for AI voice processing
    * - AI Chatbot IoT Shield & Breadboard
      - 1
-     - Hardware connection and expansion
+     - Hardware connection and expansion platform
 
 **Sensor Modules**
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 40 15 35
    :align: center
-   
+
    * - Component Name
      - Quantity
      - Function Description
@@ -90,18 +93,18 @@ Hardware Components
      - Environmental temperature and humidity detection
    * - Rain Sensor
      - 1
-     - Rainfall detection for waterproof automation
+     - Water detection for weather and automation demos
    * - Soil Moisture Sensor
      - 1
-     - Soil water content detection for smart irrigation
+     - Soil moisture detection for irrigation experiments
 
 **Actuator Modules**
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 40 15 35
    :align: center
-   
+
    * - Component Name
      - Quantity
      - Function Description
@@ -113,21 +116,21 @@ Hardware Components
      - Programmable color LED strip with multiple lighting modes
    * - SG90 Servo Motor
      - 1
-     - Precision angle control, 0-180 degrees
+     - Precision angle control from 0 to 180 degrees
    * - 5V DC Fan
      - 1
-     - Environmental regulation with temperature linkage control
+     - Basic airflow control module
    * - 2-Channel Relay Module
      - 1
-     - External device switch control, 5V/10A
+     - External device switching module
 
 **Connection Accessories**
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 40 15 35
    :align: center
-   
+
    * - Accessory Name
      - Quantity
      - Purpose Description
@@ -136,26 +139,26 @@ Hardware Components
      - Signal connection between modules
    * - USB Data Cable
      - 1
-     - Program download and power supply
+     - Firmware flashing and basic power connection
    * - Power Adapter
      - 1
-     - 5V external power supply
+     - Included external power supply for stable full-system operation
 
 **Software Resources**
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
    :widths: 40 60
    :align: center
-   
+
    * - Software Component
      - Description
    * - Pre-compiled Firmware
      - ESP32 firmware with complete MCP tools
-   * - XiaoZhi AI Server
-     - Supports voice recognition, large language model dialogue, MCP protocol parsing
+   * - Xiaozhi Backend Service
+     - Provides voice interaction, device binding, and MCP request handling
    * - Development Toolchain
      - ESP-IDF example code
 
-.. note:: 
-   This kit is designed for educational and development purposes, with all hardware components included. It is recommended to use the included power adapter to ensure stable operation.
+.. note::
+   This kit is designed for education, demos, and development. Use the included external power adapter for stable full-module operation, and use a USB Type-C data cable for flashing.

@@ -3,15 +3,21 @@
 2.Hardware Connection
 =========================
 
-This chapter will guide you through the hardware assembly of the XiaoZhi AIoT Smart Control System, including connecting the ESP32-S3 main controller with 8 functional modules.
+This chapter walks through the hardware assembly for the LAFVIN AIoT Starter Kit, including the ESP32-S3 main controller and the included modules.
 
-.. warning:: 
-   Before starting assembly, ensure all power sources are disconnected to avoid wiring operations while powered on.
+.. warning::
+   Before starting assembly, disconnect all power sources. Do not wire the board while it is powered on.
+
+.. note::
+   Use the included external power adapter only after the controller board and modules are connected. For first-time flashing, a USB Type-C data cable connected to your computer is usually enough.
+
+.. warning::
+   Do not connect high-voltage external loads to the relay module until the board, firmware, and voice control path have already been tested successfully.
 
 GPIO Pin Assignment
 ----------------------
 
-The following shows the pin correspondence between each module and ESP32-S3:
+The following table shows the main control pins used by each module:
 
 .. list-table:: GPIO Pin Assignment Table
    :widths: 25 25 25
@@ -21,51 +27,51 @@ The following shows the pin correspondence between each module and ESP32-S3:
      - Function
      - GPIO Pin
    * - RGB LED
-     - Red Green Blue Channels
-     - GPIO4 5 6
+     - Red, green, and blue channels
+     - GPIO4 GPIO5 GPIO6
    * - DHT11 Sensor
-     - Data Signal
+     - Data signal
      - GPIO11
    * - SG90 Servo
-     - PWM Control
+     - PWM control
      - GPIO16
    * - WS2812 LED Strip
-     - Data Signal
+     - Data signal
      - GPIO7
    * - Fan Control
-     - Switch Control
+     - Switch control
      - GPIO10
    * - 2-Channel Relay Module
-     - Control Signal 1 2
-     - GPIO8 9
+     - Control signals 1 and 2
+     - GPIO8 GPIO9
    * - Rain Sensor
-     - Digital Signal
+     - Digital signal
      - GPIO15
    * - Soil Sensor
-     - Digital Signal
+     - Digital signal
      - GPIO17
 
 Assembly Steps
 -----------------
 
-**Step 1: Main Controller Installation**
+**Step 1: Install the main controller**
 
-1. Insert the ESP32-S3 development board, audio board, and screen into the corresponding areas of the AI Chatbot IoT Shield
-2. Ensure pins are aligned to avoid bending damage
-3. Insert the AI Chatbot IoT Shield into the breadboard
+1. Insert the ESP32-S3 development board, audio board, and screen into the matching headers on the AI Chatbot IoT Shield.
+2. Make sure the pins are aligned correctly and are not bent.
+3. Insert the AI Chatbot IoT Shield into the breadboard.
 
 .. video:: img/connect/la066_assemble.mp4
-  :width: 100%
+   :width: 100%
 
-**Step 2: Power Connection**
+**Step 2: Connect power**
 
-1. Connect the included 12V power adapter to the AI Chatbot IoT Shield
+1. After the controller and modules are installed, connect the included external power adapter to the AI Chatbot IoT Shield.
 
-**Step 3: Sensor Module Connection**
+**Step 3: Connect the sensor modules**
 
-1. Connect the DHT11 sensor according to the pin assignment table
-2. Connect the rain sensor and soil sensor
-3. Check connection stability
+1. Connect the DHT11 sensor according to the pin assignment table.
+2. Connect the rain sensor and soil sensor.
+3. Check that each connection is secure before powering the board.
 
 .. image:: img/connect/dht11.jpg
 
@@ -73,11 +79,11 @@ Assembly Steps
 
 .. image:: img/connect/soil_sensor.jpg
 
-**Step 4: Actuator Module Connection**
+**Step 4: Connect the actuator modules**
 
-1. Connect the RGB LED module
-2. Install the servo and WS2812 LED strip
-3. Connect the fan and relay modules
+1. Connect the RGB LED module.
+2. Install the servo and WS2812 LED strip.
+3. Connect the fan and relay modules.
 
 .. image:: img/connect/rgb_led.jpg
 
@@ -89,25 +95,27 @@ Assembly Steps
 
 .. image:: img/connect/servo.jpg
 
-
 Connection Verification
 --------------------------
 
 **Basic Checklist**
 
-□ ESP32-S3 development board installed in place
-□ All Dupont wires securely connected
-□ Signal wires connected according to wiring table
-□ USB cable connected to computer, ready for firmware upload
+* ESP32-S3 development board installed correctly
+* All Dupont wires connected securely
+* Signal wires connected according to the wiring table
+* USB data cable connected to the computer and ready for firmware upload
 
 **Function Testing**
 
-1. **Power-on Test**: After connecting USB, the development board indicator light should illuminate
-2. **Voice Test**: Say "Hi ESP" to wake the device and listen for response
-3. **LED Test**: Say "Hi ESP, turn on LED" to test lighting
-4. **Sensor Test**: Say "Hi ESP, check temperature" to get data
+1. **Power-on Test**: After connecting USB power, the development board indicator light should turn on.
+2. **Voice Test**: Say ``Hi, ESP`` to wake the device and listen for a response.
+3. **LED Test**: Say ``Hi, ESP, turn on LED`` to test the lighting output.
+4. **Sensor Test**: Say ``Hi, ESP, check temperature`` to confirm that the sensor data path is working.
 
-.. tip:: 
-   It is recommended to test each function sequentially to ensure each module works properly.
+.. tip::
+   Test one module at a time. It is much easier to isolate a wiring issue before every module is connected.
 
-Next, we will proceed with software configuration to inject intelligence into the hardware system.
+Next, continue with software setup and firmware flashing.
+
+
+.. 有个问题,这个硬件链接章节前还没帮烧录,不确定是否要调整一下顺序,就是讲这些测试的转移到烧录之后进行，或者在这里先讲一下基本的连接和上电测试，烧录之后再进行功能测试。

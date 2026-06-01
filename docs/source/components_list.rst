@@ -3,6 +3,9 @@ Components List
 
 .. image:: Tutorial/img/List.jpg
 
+.. note::
+   Check that all of the items below are present before you start assembly or flashing.
+
 .. list-table:: Hardware Components List
    :widths: 30 15 55
    :header-rows: 1
@@ -12,19 +15,19 @@ Components List
      - Function Description
    * - ESP32-S3 Development Board
      - 1
-     - Main controller with integrated WiFi/Bluetooth, supports AI voice processing
+     - Main controller with integrated Wi-Fi and Bluetooth for AI voice processing
    * - AI Chatbot IoT Shield
      - 1
-     - Provides module connection platform with external power support
+     - Provides a module connection platform with external power support
    * - Breadboard
      - 1
-     - Provides module connection platform with external power support
+     - Provides a layout area for module and jumper wire connections
    * - RGB LED Module
      - 1
      - Tri-color LED with PWM color adjustment and breathing light effects
    * - DHT11 Temperature & Humidity Sensor
      - 1
-     - Detects environmental temperature (0-50°C) and humidity (20-95%RH)
+     - Detects environmental temperature (0-50 degrees C) and humidity (20-95% RH)
    * - SG90 Servo Motor
      - 1
      - Precision angle control, 0-180 degree range
@@ -33,22 +36,22 @@ Components List
      - Programmable RGB LED strip with 8 LEDs
    * - DC Fan
      - 1
-     - Environmental regulation fan, maximum current 200mA
+     - Environmental regulation fan, maximum current 200 mA
    * - 2-Channel Relay Module
      - 1
-     - 5V relay capable of controlling AC/DC loads, maximum 10A
+     - Relay module for switching supported AC or DC demo loads
    * - Rain Sensor
      - 1
-     - Detects water drops, outputs digital switch signal
+     - Detects water drops and outputs a digital switch signal
    * - Soil Moisture Sensor
      - 1
-     - Detects soil water content, outputs analog voltage signal
+     - Detects soil moisture level for irrigation and monitoring demos
    * - Dupont Jumper Wires
      - Multiple
-     - Male-to-male, male-to-female, female-to-female connection wires in various colors
+     - Male-to-male, male-to-female, and female-to-female connection wires
    * - USB Data Cable
      - 1
-     - Type-C interface for program download and debugging
-   * - 9V/2A Power Adapter
+     - USB Type-C data cable for flashing and debugging
+   * - Power Adapter
      - 1
-     - External power supply to ensure stable system operation
+     - Included external power supply for stable system operation

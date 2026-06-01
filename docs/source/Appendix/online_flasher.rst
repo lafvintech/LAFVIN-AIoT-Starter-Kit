@@ -3,17 +3,20 @@
 Online Flasher
 ======================
 
-The online flasher tool allows you to flash firmware to your ESP32 device directly from the browser, without installing any development environment.
+The online flasher is the recommended way to install firmware for first-time users. It lets you flash the ESP32-S3 board directly from the browser without installing a local development environment.
 
 Prerequisites
 ------------------
 
-- Chrome or Edge browser installed (Web Serial API support required)
-- ESP32 device connected to your computer via USB
-- Serial port device recognized in Device Manager
+* Chrome or Edge browser with Web Serial support
+* ESP32-S3 board connected with a USB Type-C data cable
+* Serial device visible in Device Manager or the system serial port list
+
+.. warning::
+   Charging-only USB cables can power the board but cannot be used for flashing.
 
 .. note::
-   If the device is not found in Device Manager, try using a different USB port.
+   If the board does not appear as a serial device, install the CP210x driver first and then try a different USB port.
 
 .. image:: img/olf1.png
 
@@ -36,17 +39,24 @@ Flashing Steps
 
    .. image:: img/olf5.png
 
-#. Click ``Connect``. A serial port selection window will pop up in the upper-left corner of the browser (grant permission if prompted). Select your device and click connect. Once connected, the button will change to ``Disconnect``.
+#. Click ``Connect``. A serial port selection window will appear. Select your device, grant permission if prompted, and confirm the connection. When the connection succeeds, the button changes to ``Disconnect``.
 
    .. image:: img/olf6.png
 
    .. image:: img/olf7.png
 
-#. Select the ``Flash Baud Rate`` and whether to enable ``Erase Flash`` (recommended for first-time flashing). Once confirmed, click ``Flash``. The tool will automatically erase and write the selected firmware.
+#. Select the ``Flash Baud Rate`` and enable ``Erase Flash`` for the first flash or when you want a clean reinstall. Then click ``Flash``. The tool erases and writes the selected firmware automatically.
 
    .. image:: img/olf8.png
 
 .. note::
-   The Flash erase process may take a while. Please be patient.
+   Erasing flash and writing firmware may take a few minutes. Keep the browser tab open and do not disconnect the cable.
 
-After the burning is completed and the power is turned off and restarted, the screen will be displayed.
+After flashing is complete, restart the board. It should enter Wi-Fi provisioning mode so you can continue with :doc:`/Tutorial/0.quick_start`.
+
+If ``Connect`` still cannot detect the board:
+
+* install the driver from :doc:`/Appendix/install_driver`
+* reconnect the board with a USB Type-C data cable
+* retry in Chrome or Edge
+* use the local flashing alternative in :doc:`/Tutorial/4.xiaozhi_ai`

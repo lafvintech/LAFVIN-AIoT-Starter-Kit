@@ -3,7 +3,7 @@
 5.Features Usage Guide
 ========================
 
-This chapter provides a detailed introduction to the various functions and usage methods of the XiaoZhi AIoT Starter Kit, helping you fully utilize the potential of this intelligent control system.
+This chapter provides a detailed introduction to the functions and usage methods of the LAFVIN AIoT Starter Kit, helping you make full use of the platform.
 
 AI Voice Control Features
 ------------------------------------------
@@ -16,7 +16,7 @@ The core feature of the LAFVIN AIoT Control Kit is controlling hardware devices 
 
 1. Wake word activation:
    
-   * Default wake word is "Hi ESP"
+   * Default wake word is "Hi ESP" or "Sophia"
    * After saying the wake word, the system will respond and wait for your commands
    * You have approximately 5 seconds to give control commands after wake-up
    * Supports continuous conversation and mid-conversation interruption
