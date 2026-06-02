@@ -8,9 +8,7 @@ This chapter provides a detailed introduction to the functions and usage methods
 AI Voice Control Features
 ------------------------------------------
 
-The core feature of the LAFVIN AIoT Control Kit is controlling hardware devices through natural language. You can interact with the system in the following ways:
-
-.. 每个功能可以搭配上一段视频
+The core feature of the LAFVIN AIoT Starter Kit is controlling hardware devices through natural language. You can interact with the system in the following ways:
 
 **Voice Wake-up Method**
 
@@ -269,5 +267,5 @@ Device Status & Control
 * "Hi ESP, is the system working normally?"
 
 **Smart Features**
-* Learns your usage patterns for faster response
-* Remembers personalized settings and preferences
+* Supports voice-driven status checks after the device is connected and bound
+* Can be extended through firmware and backend customization for advanced automation

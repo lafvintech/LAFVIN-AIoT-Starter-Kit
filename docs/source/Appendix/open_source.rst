@@ -22,7 +22,7 @@ Source Code Entry
 
 You can start from the following resources:
 
-* LAFVIN open source branch: `LAFVIN-AIoT-Starter-Kit (src branch) <https://https://github.com/lafvintech/LAFVIN-AIoT-Starter-Kit/tree/src>`_
+* LAFVIN open source branch: `LAFVIN-AIoT-Starter-Kit (src branch) <https://github.com/lafvintech/LAFVIN-AIoT-Starter-Kit/tree/src>`_
 * Xiaozhi upstream project: `xiaozhi-esp32 <https://github.com/78/xiaozhi-esp32>`_
 
 The LAFVIN ``src`` branch contains the open source code currently provided for this project. The Xiaozhi upstream project is the main reference for source-level development and feature expansion.

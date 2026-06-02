@@ -10,10 +10,10 @@ LAFVIN AIoT Starter Kit
 .. figure:: ./Tutorial/img/xiaozhi-aiot-kit.jpg
    :alt: LAFVIN AIoT Starter Kit
    :align: center
+   :scale: 50%
 
 Project Overview
 ================
-.. 下面的开源内容可以增加我们已经开源的src分支网址
 
 The LAFVIN AIoT Starter Kit is built on the open-source `xiaozhi-esp32 project <https://github.com/78/xiaozhi-esp32>`_. It uses the ESP32-S3 as the main controller and applies the MCP (Model Context Protocol) to voice-driven hardware control.
 

@@ -44,23 +44,23 @@ You can install it following the video below
 macOS Firmware Upload (Alternative)
 ---------------------------------------------
 
-1. First, find the macos folder in the Github repository, you can download the whole project to your local computer.
+1. Find the macOS folder in the GitHub repository. You can download the whole project to your local computer.
 
 .. figure:: img/macos0.png
    :align: center
 
-2. We have prepared the flashing tools and files for macos in this folder
+2. We have prepared the flashing tools and files for macOS in this folder.
 
 .. figure:: img/macos1.png
    :align: center
 
-3. You only need to open the terminal, then enter python3 mac.py, and this interface will appear
+3. Open the terminal, run ``python3 mac.py``, and the flashing interface will appear.
 
-4. Then press and hold the boot button of the ESP32-S3, insert the Type-C data cable, and press Enter to select the AI firmware you want. Here we choose xiaozhi-iot.bin
+4. Press and hold the ``BOOT`` button on the ESP32-S3, insert the USB Type-C data cable, and press Enter to select the AI firmware. In this example, choose ``xiaozhi-iot.bin``.
 
 .. figure:: img/macos2.png
    :align: center
 
-5. Then click confirm, and the program will automatically complete the flashing process for you
-6. After flashing is complete, press the reset button on the ESP32S3, and wait for the device to restart
-7. After restarting, follow :ref:`xiaozhi_conf <xiaozhi_conf>` for network API configuration and adding the device in the backend
+5. Click Confirm. The program will complete the flashing process automatically.
+6. After flashing is complete, press the ``RST`` button on the ESP32-S3 and wait for the device to restart.
+7. After restarting, follow :ref:`xiaozhi_conf <xiaozhi_conf>` for network configuration and device binding in the backend.
