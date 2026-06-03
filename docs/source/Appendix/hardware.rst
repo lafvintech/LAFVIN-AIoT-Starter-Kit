@@ -12,10 +12,6 @@ Main Controller - ESP32-S3
 
 ESP32-S3 is the core processor of this project, providing powerful computing capabilities and rich interfaces.
 
-.. figure:: img/esp32s3-1.jpg
-   :align: center
-   :width: 70%
-
 .. figure:: img/esp32s3-2.jpg
    :align: center
    :width: 70%
@@ -125,7 +121,7 @@ The following diagram shows how each hardware module is connected:
 
 .. 扩展板和屏幕音频板连接(可能插到面包板上)
 
-.. figure:: img/connect_exp.png
+.. figure:: img/main.png
    :align: center
    :width: 80%
 

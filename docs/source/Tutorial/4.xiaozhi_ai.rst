@@ -102,6 +102,9 @@ You can also use an online flashing tool. The advantage of this method is that y
 .. warning::
    Use a USB Type-C cable that supports data transfer. A charging-only cable may power the board but will not work for flashing.
 
+.. note::
+   On Windows, connect the USB Type-C data cable to the ESP32-S3 ``UART`` port on the left side of the board before clicking ``Connect``. On macOS, connect the cable to the ESP32-S3 ``USB`` port on the right side, then press and hold ``BOOT``, press ``RESET`` while still holding ``BOOT``, and enter download mode before clicking ``Connect``. The screen will turn black after the device enters download mode; this is normal.
+
 For detailed instructions on using the online flasher, see :ref:`Online Flasher <online_flasher>`.
 
 Follow these steps:
@@ -113,8 +116,10 @@ Follow these steps:
       - Firmware: ``Xiaozhi-Aiot``
       - Version: ``Xiaozhi-Aiot``
 
-   C. Connect the development board to your computer using a USB Type-C data cable. Click ``Connect``, then select your device in the browser pop-up window and click ``Connect``.
-   D. Click ``Flash`` to start flashing. Wait for the process to complete, then restart the device.
+   C. Connect the development board to your computer using the correct USB Type-C port for your operating system, as described in the note above, before clicking ``Connect``.
+   D. Click ``Connect``, then select your device in the browser pop-up window and click ``Connect`` again.
+   E. Click ``Flash`` to start flashing. Wait for the process to complete.
+   F. After flashing is complete, restart the device by pressing the ``RST`` or ``RESET`` button on the ESP32-S3 board. You do not need to unplug the USB cable unless the device does not respond.
 
 .. raw:: html
 
@@ -161,8 +166,20 @@ If you are using macOS and need a local flashing path, refer to :ref:`macos_uplo
 
 .. _xiaozhi_conf:
 
+Wi-Fi Configuration
+----------------------
+
+* After the firmware is flashed, press the ``RST`` or ``RESET`` button on the development board. The board will restart and enter network configuration mode.
+* Connect your phone to the hotspot named ``Xiaozhi-XXXX``. The configuration page should open automatically. If not, manually enter ``http://192.168.4.1`` in your browser to access the configuration interface.
+
+  .. image:: img/wifi_config.png
+
+* Select your Wi-Fi network, enter the password, and click ``Save``. The device will save the settings and restart automatically.
+* After restarting, the board will connect to your Wi-Fi and announce a 6-digit verification code. If it does not restart within about 30 seconds, press the ``RST`` or ``RESET`` button once.
+* Go to the backend interface and add the device in the Agent you just created:
+
 Bind the Device
-------------------------------------------
+-----------------
 
 1. Keep the board powered on after Wi-Fi configuration.
 2. In the agent page, click ``Add Device``.
@@ -171,9 +188,11 @@ Bind the Device
 
 .. figure:: img/web6.png
    :align: center
-   :alt: Bind the board with a verification code
 
 After the restart completes, say ``Hi, ESP`` to start the first conversation.
+
+.. figure:: img/main.png
+   :align: center
 
 .. _firmware_upload:
 
@@ -197,5 +216,4 @@ This path usually requires you to:
 
 .. note::
    Self-hosting is an advanced workflow intended for users who are comfortable with backend deployment, ESP-IDF builds, firmware changes, and credential management.
-
 
